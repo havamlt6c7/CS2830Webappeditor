@@ -14,6 +14,76 @@
 		<meta charset="utf-8">
 		<title>CSS Position</title>
 		
+        <style>
+        *{
+            margin: 0;
+            }
+            div {
+                    width: 500px;
+                    height: 100px;
+            }
+            
+            /*HTML elements are postioned static by default
+            
+            An element with postion: static; is not positioned in any special way, it is always postioned according to the normal flow of the page.
+            */
+            
+            #div1 {
+                    background-color: forestgreen;
+            }
+            
+            #dive2 {
+                background-color: red;
+                /* Relative means to place this element on page reative to it's original postion */
+                position: relative;
+                top: 10px;
+                left: 100px;
+                
+                /* 
+                The z-index property specifies the stack order of an element. An element with a greater stack order is always in front of an elelment with a lower stack orderl
+                */
+                z-index: 1;
+                /* Note: z-index only works on postioned elements */
+            }
+            
+            #div3 {
+                background-color: yellow;
+                margin-bottom: 5000px;
+            }
+            #mini {
+                background-color: powderblue;
+                width: 50px;
+                height: 50px;
+                
+                /* Removing the element from the normal document  flow and postion it realative to it's first postioned  ancestor */
+                position: absolute;
+                top: 10px;
+                left: 10px;
+            }
+            
+            /* Ann element with postion: fixed; is postioned realtive to the viewport, which meansit always stays in the same place even if the page is scrolled */
+            
+            div.fixed {
+                position: fixed;
+                bottom: 0;
+                right: 0;
+                border: 3px solid blue;
+                width: 300px;
+            }
+            #fixed {
+                    position: fixed;
+                    bottom: 0;
+                    right: 0;
+                    border: 3px solid blue;
+                    width: 300px;
+            
+            }
+            p.middle {
+                position: absolute;
+                    top: 0;
+            }
+            
+        </style>
 	</head>
 	<body>
 		<div id="div1"></div>
