@@ -1,0 +1,123 @@
+<!-- 
+
+<?php 
+    
+    $title = $htmll = $csss =" ";
+        if ($_SERVER["REQUEST_METHOD"] == "POST"){
+            $title=check_that($_POST["title"]);
+            $htmll=check_that($_POST["htmll"]);
+            $csss=check_that($_POST["csss"]);
+            }
+
+       
+
+if(!isset($_POST['title'])){
+$title_eer="Title is Required";
+}
+    else {$title=$inter_faced($_POST['title'])};
+        
+function check_that($inter_user)
+        {
+        $inter_user=stripslashes($inter_user);
+        $inter_user=htmlspecialchars($inter_user);
+        $inter_user=trim($inter_user);
+        return $inter_user;
+        } 
+ 
+?>
+
+-->
+
+<!DOCTYPE html>
+<!--
+name: Michael Thomas
+pawprint: mlt6c7
+date: 09042017
+-->
+<html>
+    <head>
+        <title>Assignment 5: Code Editor</title>
+        
+        
+<meta>
+        
+        <style>    
+               body{
+                    grid-column: (15em, 1em)[11];
+                    } 
+                                
+                 /*   #css_html_out{
+                    position: fixed;
+                    right: 9gr;
+                    width: 5gr;
+                    } --> */
+                    .wrapper {
+                     width: 85%;
+                    }
+                    .CSS, .HTML {
+                     margin-right: 2%;
+                    }
+                    .SHOW {
+                    margin-right: 2%; 
+                    float: right;
+                    position: top;
+                    position:absolute;left:65%;top:0;transform:translate(-65%,0%);
+                    -ms-transform:translate(-65%,0%);}
+                    }
+                </style>
+
+            <script>
+               window.onload=init;
+                function init(){
+                    var textarea=document.getElementById(onclick);
+                    Text.onclick=enter_code;
+                }
+                function enter_code(){
+                    var textarea=document.getElementById(ondblclick);
+                    textarea.ondblclick="<? php $testinput; ?> ";
+                }
+
+            </script>
+    
+    </head>
+<body>
+    <div class="wrapper"; >
+    <form method="post" id="CSS" action="#">
+        <div class="CSS">
+            <label for="CSS"></label>
+                <textarea id="CSS" name="CSS" form="CSS"
+                rows="20" cols="50"
+                placeholder="Enter CSS of your choice" maxlength="75" accesskey="C"></textarea>
+        </div><br><br>
+    </form>  
+    
+   <form method="post" id="HTML" action="#"> 
+          <div class="HTML">
+            <label for="HTML"></label>
+                <textarea id="HTML" name="HTML" form="HTML"
+                rows="20" cols="50"
+                placeholder="Enter HTML of your choice" maxlength="75" accesskey="H"></textarea>
+       </div><br><br>
+        </form>
+   
+    
+    <form method="post" id="SHOW" action="#">
+        <div class="SHOW" >
+            <label for="SHOW"></label>
+                <textarea id="SHOW" name="SHOW" form="SHOW"
+                rows="50" cols="85"
+                placeholder="" maxlength="125" accesskey="S"></textarea>
+        </div><br><br>
+        <input type="submit" value="Launch" form="CSS">
+        <input type="submit" value="Clear" form="HTML">
+        <input type="submit" value="Toggle" form="SHOW">
+    </form>
+    
+ </div>
+         
+         
+         
+<!-- Process That process_that.php --> 
+         
+  </body>
+</html>

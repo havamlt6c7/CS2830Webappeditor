@@ -1,0 +1,112 @@
+<!-- 
+
+<?php 
+    
+    $title = $htmll = $csss =" ";
+        if ($_SERVER["REQUEST_METHOD"] == "POST"){
+            $title=check_that($_POST["title"]);
+            $htmll=check_that($_POST["htmll"]);
+            $csss=check_that($_POST["csss"]);
+            }
+
+       
+
+if(!isset($_POST['title'])){
+$title_eer="Title is Required";
+}
+    else {$title=$inter_faced($_POST['title'])};
+        
+function check_that($inter_user)
+        {
+        $inter_user=stripslashes($inter_user);
+        $inter_user=htmlspecialchars($inter_user);
+        $inter_user=trim($inter_user);
+        return $inter_user;
+        } 
+ 
+?>
+
+-->
+
+<!DOCTYPE html>
+<!--
+name: Michael Thomas
+pawprint: mlt6c7
+date: 09042017
+-->
+<html>
+    <head>
+        <meta>
+            
+        <title>Assignment 5: Code Editor</title>
+                <style> 
+              
+        <!-- Grid It -->
+          body {
+            grid-column (10em,1em)[7]; 
+            }
+          #css_html_out
+            {
+            position: absolute;
+            right: 4gr;
+            width: 5gr;
+                }
+                    
+                    
+            
+                    
+                </style>
+
+            <script>
+               window.onload=init;
+                function init(){
+                    var textarea=document.getElementById(MouseEvent);
+                    Text.onclick=enter_code;
+                }
+                function enter_code(){
+                    var textarea=document.getElementById(MouseEvent);
+                    textarea.src=" ";
+                }
+
+            </script>
+    
+    </head>
+<body>
+    
+    <form method="post" id="CSS" action="#">
+        <div>
+            <label for="CSS"></label>
+                <textarea id="CSS" name="CSS" form="CSS"
+                rows="20" cols="50"
+                placeholder="Enter CSS of your choice" maxlength="75" accesskey="C"></textarea>
+        </div><br><br>
+    </form>  
+    
+   <form method="post" id="HTML" action="#"> 
+          <div>
+            <label for="HTML"></label>
+                <textarea id="HTML" name="HTML" form="HTML"
+                rows="20" cols="50"
+                placeholder="Enter HTML of your choice" maxlength="75" accesskey="H"></textarea>
+        </div><br><br>
+    </form>  
+    <form method="post" id="SHOW" action="#">
+        <div id="css_html_out" >
+            <label for="SHOW"></label>
+                <textarea id="SHOW" name="SHOW" form="SHOW"
+                rows="60" cols="75"
+                placeholder="" maxlength="125" accesskey="S"></textarea>
+        </div><br><br>
+        <input type="submit" value="Launch" form="CSS">
+        <input type="submit" value="Clear" form="HTML">
+        <input type="submit" value="Toggle" form="SHOW">
+    </form>
+    
+
+         
+         
+         
+<!-- Process That process_that.php --> 
+         
+  </body>
+</html>
